@@ -1,0 +1,54 @@
+doctype html
+html.no-js
+	head
+		meta(charset='utf-8')
+		title GDG Fortaleza
+		meta(name='MobileOptimized', content='320')
+		meta(name='HandheldFriendly', content='True')
+		meta(name='keywords', content='io2016, ioextended')
+		meta(name='apple-mobile-web-app-capable', content='yes')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		meta(name='apple-mobile-web-app-status-bar-style', content='black-translucent')
+		link(href='https://fonts.googleapis.com/css?family=Roboto:400,700,500', rel='stylesheet', type='text/css')
+
+		
+		//- FACEBOOK META TAGS
+		//- meta(property='og:type', content='website')
+		//- meta(property='og:image:type', content='image/jpeg')
+		//- meta(itemprop='name', content='GDG Fortaleza')
+		//- meta(property='og:site_name', content='Google I/O Extended Fortaleza')
+		//- meta(property="og:url" content="http://io16extended.gdgfortaleza.org/ ")
+		//- meta(property='og:title', content='GDG Fortaleza')
+		//- meta(itemprop='image', content='http://io16extended.gdgfortaleza.org/images/social.jpg')
+		//- meta(property='og:image', content='http://io16extended.gdgfortaleza.org/images/social.jpg')
+		//- meta(property='og:description', content='O Google I/O Extended acontecerá em Fortaleza na FB Ideias. O objetivo é fomentar o empreendedorismo digital, a economia criativa e a inovação tecnológica na cidade.')
+
+		
+		// build:css styles/main.css
+		link(rel='stylesheet' href='styles/main.css')
+		// endbuild
+
+	body
+		| <!--[if lt IE 10]>
+		|	 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		| <![endif]-->
+		
+		include ../includes/_navbar.jade
+		
+		block content
+		
+		include ../includes/_footer.jade
+		
+		// build:js scripts/vendor.js
+		// bower:js
+		script(src='/bower_components/jquery/dist/jquery.js')
+		script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+		// endbower
+		// endbuild
+		
+		// build:js scripts/app.js
+		script(src='scripts/main.js')
+		// endbuild
+		
+    
